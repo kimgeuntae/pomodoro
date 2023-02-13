@@ -32,6 +32,8 @@ class _HomeScreenState extends State<HomeScreen> {
             flex: 2,
             child: Center(
               child: IconButton(
+                iconSize: 120,
+                color: Theme.of(context).cardColor,
                 onPressed: () {},
                 icon: const Icon(
                   Icons.play_circle_outlined,
