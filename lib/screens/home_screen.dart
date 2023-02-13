@@ -47,12 +47,28 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 Expanded(
                   child: Container(
-                    decoration:
-                        BoxDecoration(color: Theme.of(context).cardColor),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).cardColor,
+                    ),
                     child: Column(
-                      children: const [
-                        Text('Pomodoros'),
-                        Text('0'),
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Pomodoros',
+                          style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.w600,
+                            color: Theme.of(context).textTheme.headline1!.color,
+                          ),
+                        ),
+                        Text(
+                          '0',
+                          style: TextStyle(
+                            fontSize: 60,
+                            fontWeight: FontWeight.w600,
+                            color: Theme.of(context).textTheme.headline1!.color,
+                          ),
+                        ),
                       ],
                     ),
                   ),
