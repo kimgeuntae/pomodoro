@@ -16,7 +16,17 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           Flexible(
             flex: 1,
-            child: Container(),
+            child: Container(
+              alignment: Alignment.bottomCenter,
+              child: Text(
+                '25:00',
+                style: TextStyle(
+                  color: Theme.of(context).cardColor,
+                  fontSize: 90,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
           ),
           Flexible(
             flex: 2,
