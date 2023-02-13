@@ -43,7 +43,15 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Flexible(
             flex: 1,
-            child: Container(),
+            child: Container(
+              decoration: BoxDecoration(color: Theme.of(context).cardColor),
+              child: Column(
+                children: const [
+                  Text('Pomodoros'),
+                  Text('0'),
+                ],
+              ),
+            ),
           ),
         ],
       ),
