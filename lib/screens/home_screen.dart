@@ -49,9 +49,15 @@ class _HomeScreenState extends State<HomeScreen> {
     });
   }
 
-  void onResetPressed() {
+  void onResetTimePressed() {
     setState(() {
       totalSeconds = twentyFiveMinutes;
+    });
+  }
+
+  void onResetPomodorosPressed() {
+    setState(() {
+      totalPomodoros = 0;
     });
   }
 
@@ -99,7 +105,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   IconButton(
                     iconSize: 40,
                     color: Theme.of(context).cardColor,
-                    onPressed: onResetPressed,
+                    onPressed: onResetTimePressed,
                     icon: const Icon(Icons.restore_outlined),
                   ),
                 ],
@@ -131,13 +137,33 @@ class _HomeScreenState extends State<HomeScreen> {
                             color: Theme.of(context).textTheme.headline1!.color,
                           ),
                         ),
-                        Text(
-                          '$totalPomodoros',
-                          style: TextStyle(
-                            fontSize: 60,
-                            fontWeight: FontWeight.w600,
-                            color: Theme.of(context).textTheme.headline1!.color,
-                          ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              '$totalPomodoros',
+                              style: TextStyle(
+                                fontSize: 60,
+                                fontWeight: FontWeight.w600,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .headline1!
+                                    .color,
+                              ),
+                            ),
+                            IconButton(
+                              iconSize: 30,
+                              color: Theme.of(context).cardColor,
+                              onPressed: onResetPomodorosPressed,
+                              icon: Icon(
+                                Icons.settings_backup_restore_outlined,
+                                color: Theme.of(context)
+                                    .textTheme
+                                    .headline1!
+                                    .color,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
